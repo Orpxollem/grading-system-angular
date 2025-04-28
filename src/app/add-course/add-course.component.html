@@ -1,0 +1,31 @@
+<div class="add-course">
+  <h2 class="add-title">ADD NEW COURSE</h2>
+
+  <div class="row g-2">
+    <div class="col-md-3">
+      <select class="form-select" [(ngModel)]="semester">
+        <option value="">Select Semester</option>
+        <option *ngFor="let sem of availableSemesters" [value]="sem">{{ sem }}</option>
+      </select>
+      <small class="text-muted">~ Semester</small>
+    </div>
+
+    <div class="col-md-3">
+      <input type="text" class="form-control" placeholder="Course Name" [(ngModel)]="courseName" />
+    </div>
+
+    <div class="col-md-2">
+      <input type="number" class="form-control" [(ngModel)]="grade" />
+      <small class="text-muted">~ Grade (e.g 75)</small>
+    </div>
+
+    <div class="col-md-2">
+      <input type="number" class="form-control" [(ngModel)]="credits" />
+      <small class="text-muted">~ Credits (e.g 3)</small>
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-outline-secondary" (click)="addCourse()">Add</button>
+    </div>
+  </div>
+</div>

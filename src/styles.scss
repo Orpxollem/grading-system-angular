@@ -1,0 +1,50 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gpa {
+    background-color: #0c98b1;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.add-course {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.btn-outline-secondary {
+    border-color: #53d75a;
+}
+
+.btn-outline-secondary:hover{
+    background-color: #0a8110;
+}
+
+.courses {
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.toast-error {
+    background-color: #e74c3c !important; // bright red
+    color: white !important;
+  }
+  
+
+//list-headers
+
+//course-list

@@ -1,0 +1,30 @@
+<!-- Filtered list of semesters -->
+<div class="courses" *ngFor="let semester of (coursesBySemester | keyvalue)">
+  <ng-container *ngIf="filterSemester === 'All' || semester.key === filterSemester">
+
+    <!-- Semester Header with GPA -->
+    <h4 class="mt-4 d-flex justify-content-between align-items-center">
+      <span>{{ semester.key }}</span>
+      <span class="badge bg-primary">GPA: {{ gpaBySemester[semester.key] || '0.00' }}</span>
+    </h4>
+
+    <div class="row g-5 fw-bold">
+      <span class="col">Course Name</span>
+      <span class="col">Grade</span>
+      <span class="col">Credits</span>
+      <div class="col"></div>
+    </div>
+
+    <div *ngFor="let course of semester.value; let i = index" class="row g-5 align-items-center mb-2">
+      <span class="col">{{ course.name }}</span>
+      <span class="col">{{ course.grade }}</span>
+      <span class="col">{{ course.credits }}</span>
+      <span class="col">
+        <button class="btn btn-danger btn-sm" (click)="deleteCourse(i)">
+          <i class="fas fa-ban"></i>
+        </button>
+      </span>
+    </div>
+
+  </ng-container>
+</div>
